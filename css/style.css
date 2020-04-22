@@ -1,0 +1,14 @@
+
+html{
+    font-size: 10px;
+}
+body{
+    font-size: 1.4rem;
+    background-color: #ffffff;
+    color: #181818;
+    font-family: "Spoqa Han Sans", "Sans-serif";
+}
+a{
+    color: inherit;
+    text-emphasis: none;
+}
