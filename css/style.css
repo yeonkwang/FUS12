@@ -2,6 +2,24 @@
 html{
     font-size: 10px;
 }
+::-moz-selection {
+    background: #233d84;
+    color: #ffffff;
+  }
+  
+  ::selection {
+    background: #233d84;
+    color: #ffffff;
+  }
+  /* 숨김콘텐츠 */
+  .a11y-hidden{
+      position: absolute;
+      visibility: hidden;
+      width: 1px;
+      height: 1px;
+      clip-path: polygon(0 0, 0 0, 0 0);
+  }
+  
 body{
     font-size: 1.4rem;
     background-color: #ffffff;
@@ -10,5 +28,30 @@ body{
 }
 a{
     color: inherit;
-    text-emphasis: none;
+    text-decoration: none;
+}
+/* 버튼 디자인 */
+.app-header .button,
+.app-header .button .ir,
+.app-header .button .close {
+  cursor: pointer;
+}
+/* 메뉴 열기 버튼 */
+.app-header .button.is-open-menu {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    padding: 20px;
+    transition: all 0.3s ease;
+}
+.app-header .button.is-open-menu .ir {
+    display: block;
+    width: 26px;
+    height: 22px;
+    background: url(../images/navigation-button.gif) no-repeat 50%;
+}
+.app-header .button.is-open-menu:hover,
+.app-header .button.is-open-menu:focus {
+  background: #f5f5f5;
 }
