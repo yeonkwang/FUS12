@@ -32,7 +32,10 @@ a{
 }
 /* 헤더 디자인 */
 .app-header{ 
+  -webkit-backdrop-filter: blur(2px);
+  backdrop-filter: blur(2px);
   position: fixed;
+  z-index: 600;
   left: 0;
   right: 0;
   top: 0;
@@ -42,6 +45,7 @@ a{
   background: rgba(255, 255, 255, 0.4);
   margin-bottom: 30px;
   border-bottom: 1px solid #e0e0e0;
+  
 }
 /* 브랜드 디자인 */
 .brand {
@@ -84,6 +88,70 @@ a{
 .app-header .button.is-open-menu:hover,
 .app-header .button.is-open-menu:focus {
   background: #f5f5f5;
+}
+/* 내비게이션 디자인 */
+.reset-list{
+  list-style: none;
+  padding-left: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.app-navigation {
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding-top: 60px;
+  background: hsla(225, 57%, 10%, 0.9);
+  color: #fff;
+  transition: all 0.4s cubic-bezier(0.66, -0.01, 0.3, 0.99);
+  /* -webkit-transform: translateX(105vw);
+  transform: translateX(105vw); */
+  -webkit-backdrop-filter: blur(2px);
+  backdrop-filter: blur(2px);
+}
+.app-navigation.is-active {
+  -webkit-transform: translateX(0);
+  transform: translateX(0);
+}
+.app-navigation li {
+  border-bottom: 1px solid hsla(225, 57%, 30%, 0.5);
+}
+.app-navigation a {
+  display: block;
+  padding: 1em;
+  transition: all 0.4s ease;
+}
+.app-navigation a:hover, .app-navigation a:focus{
+  background: #2e437c;
+  padding-left: 1em 2em;
+}
+.app-navigation a:focus{
+  outline: 0;
+}
+
+/* 내비게이션 버튼디자인 */
+.app-navigation .button.is-close-menu {
+  position: absolute;
+  z-index: 10;
+  top: 10px;
+  right: 10px;
+  padding: 20px;
+  background: transparent;
+  color: #fff;
+  font-weight: 100;
+  font-size: 40px;
+  line-height: 0.5;
+  transition: all 0.4s ease;
+}
+.app-navigation .button.is-close-menu:focus {
+  outline-offset: -5px;
+}
+.app-navigation .button.is-close-menu:hover {
+  -webkit-transform: scale(1.2);
+  transform:rotate(360deg) scale(1.2);
 }
 /*  메인 디자인 */
 .app-main {
