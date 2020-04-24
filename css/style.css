@@ -97,8 +97,6 @@ a {
   z-index: 1000;
   top: 0;
   left: 0;
-  right: 0;
-  bottom: 0;
   width: 100%;
   height: 100vh;
   padding-top: 60px;
@@ -290,4 +288,85 @@ a {
 }
 .ediya-menu__item--multi-column dl {
   margin: 0;
+}
+/* 애니메이션 */
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fade-slide-in-from-top {
+  0% {
+    transform: translateY(-4rem);
+    opacity: 0;
+  }
+  100% {
+    transform: none;
+    opacity: 1;
+  }
+}
+@keyframes fade-slide-in-from-right {
+  0% {
+    transform: translateX(4rem);
+    opacity: 0;
+  }
+  100% {
+    transform: none;
+    opacity: 1;
+  }
+}
+@keyframes fade-slide-in-from-left {
+  0% {
+    transform: translateX(-4rem);
+    opacity: 0;
+  }
+  100% {
+    transform: none;
+    opacity: 1;
+  }
+}
+@keyframes transform-none {
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+.app-header,
+.brand,
+.button.is-open-menu,
+.ediya-menu__item {
+  opacity: 0;
+  animation: transform-none 0.35s 0.4s ease-out forwards;
+}
+.brand,
+.button.is-open-menu {
+  animation-delay: 0.6s;
+}
+.app-header {
+  transform: translateY(-4rem);
+}
+.brand {
+  transform: translateX(-4rem);
+}
+.button.is-open-menu {
+  transform: translateX(4rem);
+}
+.ediya-menu__item {
+  transform: translateY(4rem);
+}
+/* 시간 차 애니메이션 */
+.ediya-menu__item:nth-child(1) {
+  animation-delay: 0.6s;
+}
+.ediya-menu__item:nth-child(2) {
+  animation-delay: 0.8s;
+}
+.ediya-menu__item:nth-child(3) {
+  animation-delay: 1.0s;
+}
+.ediya-menu__item:nth-child(4) {
+  animation-delay: 1.2s;
 }
